@@ -1,0 +1,123 @@
+.entry-detail-container {
+  background: linear-gradient(135deg, #fffaf0 0%, #faebd7 100%);
+  border-radius: 12px;
+  padding: 50px;
+  box-shadow: 0 10px 40px rgba(74, 55, 40, 0.2);
+  max-width: 850px;
+  margin: 0 auto;
+  border: 2px solid #d2b48c;
+}
+
+.entry-detail {
+  color: #4a3728;
+  position: relative;
+}
+
+.entry-detail h2 {
+  font-family: 'Crimson Text', serif;
+  font-size: 42px;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  font-style: italic;
+  color: #4a3728;
+}
+
+.entry-date {
+  font-size: 15px;
+  color: #8b7355;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.entry-body {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #6b5d52;
+  margin-bottom: 40px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  border-left: 4px solid #cd853f;
+  border-radius: 6px;
+}
+
+.entry-actions {
+  display: flex;
+  gap: 12px;
+  border-top: 2px dashed #d2b48c;
+  padding-top: 24px;
+}
+
+.back-btn,
+.delete-btn {
+  padding: 12px 24px;
+  border: 2px solid;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Crimson Text', serif;
+  flex: 1;
+}
+
+.back-btn {
+  background: #e6d5c3;
+  color: #4a3728;
+  border-color: #d2b48c;
+}
+
+.back-btn:hover {
+  background: #d2b48c;
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  background: rgba(205, 92, 92, 0.2);
+  color: #8b4513;
+  border-color: #cd5c5c;
+}
+
+.delete-btn:hover:not(:disabled) {
+  background: rgba(205, 92, 92, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(205, 92, 92, 0.2);
+}
+
+.delete-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background: rgba(205, 92, 92, 0.2);
+  border: 2px solid #8b4513;
+  color: #8b4513;
+  padding: 16px;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .entry-detail-container {
+    padding: 25px;
+  }
+
+  .entry-detail h2 {
+    font-size: 32px;
+  }
+
+  .entry-body {
+    font-size: 16px;
+  }
+
+  .entry-actions {
+    flex-direction: column;
+  }
+
+  .back-btn,
+  .delete-btn {
+    width: 100%;
+  }
+}
